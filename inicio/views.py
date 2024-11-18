@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.template import Template, Context 
+from django.template import Template, Context, loader 
+from datetime import datetime   
+
 
 def vista(request):
     return HttpResponse('Hola mundo')
@@ -37,5 +39,39 @@ def template1(request):
     
     return HttpResponse(templateRender)
 
+def template2(request):
+    
+    fecha_actual = datetime.now()
+    fecha = {
+        "Fecha": fecha_actual,
+        'numeros': list(range(1,11)),
+        }
+         
+
+    # template_archivo = open(r'templates\template2.html')
+    
+    # template = Template(template_archivo.read())
+    
+    # template_archivo.close()
+
+    # contexto = Context()
+    
+    # #template armado con el context para que sea entendido por el html
+    # templateRender = template.render(contexto)
+    
+    #V2
+    # template = loader.get_template('template2.html')
+    # # contexto = Context(fecha_actual) el loader automaticamente genera el contexto. ESTO NO VA PERO ESTA OCULTO.
+    # templateRender = template.render(fecha)
+    
+    # return HttpResponse(templateRender)
+
+    #V3
+    # ya no utilizamos el Httpresponse
+    # en esta version ya no necesitamos especificar cada detalle del template. 
+    # Para los proximos templates utilizamos toda la version 3. 
+    return render(request, 'template2.html', fecha)
+    
 
 
+    
