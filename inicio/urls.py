@@ -1,5 +1,5 @@
 from django.urls import path
-from inicio.views import vista, vista2, vista3, inicio, vista4, vista5
+from inicio.views import vista, vista2, vista3, inicio, vista4, vista5, template1 
 
 
 urlpatterns = [   
@@ -8,7 +8,9 @@ urlpatterns = [
     path('vista3/', vista3), 
     path('inicio/', inicio),  
     path('vista4/', vista4), 
-    path('vista5/', vista5),
+    path('vista5/<nombre>/', vista5),
+    path('template1/', template1),
+    
 ]
 
 
