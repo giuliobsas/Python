@@ -13,8 +13,9 @@ def vista2(request):
 def vista3(request):
     return HttpResponse('Hola mundo3')
 
-def inicio(reqeust):
-    return HttpResponse('inicio')
+def inicio(request):
+    # return HttpResponse('inicio') - la pagina template web
+    return render(request, 'index.html')
 
 def vista4(request):
     return HttpResponse('Hola mundo4')
