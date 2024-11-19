@@ -71,7 +71,12 @@ def template2(request):
     # en esta version ya no necesitamos especificar cada detalle del template. 
     # Para los proximos templates utilizamos toda la version 3. 
     return render(request, 'template2.html', fecha)
+
+# def cliente(request, nombre, marca, color):
     
+#     dato = cliente(nombre=nombre, marca=marca, color=color)
+#     dato.save()
+#     return render(request, 'cliente.html', {'dato': dato})
+# NO HAY URL CONFIG
 
 
-    

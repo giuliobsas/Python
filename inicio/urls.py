@@ -1,5 +1,5 @@
 from django.urls import path
-from inicio.views import vista, vista2, vista3, inicio, vista4, vista5, template1, template2 
+from inicio.views import vista, vista2, vista3, inicio, vista4, vista5, template1, template2
 
 
 urlpatterns = [   
