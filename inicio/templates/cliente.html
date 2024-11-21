@@ -1,11 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Se creo el cliente {{dato.id}} {{dato.nombre}} correctamente </h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+
+{% block title_head %}
+
+ Cliente
+
+{% endblock title_head %}
+
+{% block mensaje_Inicial %}
+
+Se creo el cliente {{dato.id}} {{dato.nombre}} {{dato.marca}} {{dato.color}}correctamente
+
+{% endblock mensaje_Inicial %}
+
+
+{% block About_us %}
+
+<li class="list-inline-item"><a href="#!">About Us</a></li>
+
+{% endblock About_us %}
+
+{% block contact_us %}
+<li class="list-inline-item"><a href="#!">Contact AR</a></li>
+{% endblock contact_us %}
+
+
+{% block terms_AR %}
+
+<li class="list-inline-item"><a href="#!">Terms AR</a></li>
+
+{% endblock terms_AR %}

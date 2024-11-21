@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segundo Template</title>
-</head>
-<body>
-    <h1>
-        Segundo template!
-    </h1>
+{% extends "index.html" %}
+{% load static %}
+
+{% block mensaje_Inicial %}
+
+<h1>
+        
+    Segundo template!
+    
+</h1>
+
+{% endblock mensaje_Inicial %}
+
+{% block main %}
+    
     <h2>
         {{fecha}}
     </h2>
@@ -31,5 +35,5 @@
         {% endif%}
         {% endfor%}
     </ol>
-</body>
-</html>
+    <img src={% static "assets/img/testimonials-2.jpg"%} alt="">
+{% endblock main %}

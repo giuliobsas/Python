@@ -1,15 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primer Template</title>
-</head>
-<body>
-    <h1>
-        Primer template armado para que se pueda escrbir en el archivo html. Se pueden usar etiquetas h1.
-    </h1>
-</body>
-</html>
 
+{% extends "base.html" %}
+
+
+{% block title_head %}
+
+Primer Template
+
+{% endblock title_head %}
+
+{% block mensaje_Inicial %}
+
+<h1>
+    Primer template armado para que se pueda escrbir en el archivo html. Se pueden usar etiquetas h1.
+</h1>
+
+{% endblock mensaje_Inicial %}
+
+
+{% block About_us %}
+
+<li class="list-inline-item"><a href="#!">About Us</a></li>
+
+{% endblock About_us %}
+
+{% block contact_us %}
+<li class="list-inline-item"><a href="#!">Contact AR</a></li>
+{% endblock contact_us %}
+
+
+{% block terms_AR %}
+
+<li class="list-inline-item"><a href="#!">Terms AR</a></li>
+
+{% endblock terms_AR %}
 
