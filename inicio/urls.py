@@ -1,6 +1,5 @@
 from django.urls import path
-from inicio.views import vista, vista2, vista3, inicio, vista4, vista5, template1, template2, cliente
-
+from inicio.views import vista, vista2, vista3, inicio, vista4, vista5, template1, template2, cliente, buscar_producto
 app_name = 'inicio'
 
 urlpatterns = [   
@@ -13,6 +12,7 @@ urlpatterns = [
     path('template1/', template1, name='template1'),
     path('template2/', template2, name='template2'),
     path('cliente/', cliente, name='cliente'),
+    path('buscar_producto/', buscar_producto, name='buscar_producto'),
 ]
 
 

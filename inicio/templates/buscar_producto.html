@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+
+{% block title_head %}
+
+ Seccion Cliente
+
+{% endblock title_head %}
+
+{% block mensaje_Inicial %}
+
+Que producto necesita buscar?
+
+{% endblock mensaje_Inicial %}
+
+{% block main %} 
+
+<form action={% url "inicio:buscar_producto" %}> </form>
+
+{% endblock main %} 
+
+
+
+
+
+
+{% block About_us %}
+
+<li class="list-inline-item"><a href="#!">About Us</a></li>
+
+{% endblock About_us %}
+
+{% block contact_us %}
+<li class="list-inline-item"><a href="#!">Contact AR</a></li>
+{% endblock contact_us %}
+
+
+{% block terms_AR %}
+
+<li class="list-inline-item"><a href="#!">Terms AR</a></li>
+
+{% endblock terms_AR %}

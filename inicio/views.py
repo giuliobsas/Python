@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from django.template import Template, Context, loader 
+from django.template import Template, Context, loader
 from datetime import datetime   
 
 
@@ -80,9 +80,13 @@ def template2(request):
 #     dato.save()
 #     return render(request, 'cliente.html', {'dato' : dato} )
 
-def cliente(request):
-    
-     return render(request, 'cliente.html')
+def cliente(request):  
+    return render(request, 'cliente.html')
+
+def buscar_producto(request):
+    # prod = cliente(nombre=nombre)
+    # prod.save()
+    return render(request, 'buscar_producto.html')
 
 
 
