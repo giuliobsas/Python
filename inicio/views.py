@@ -82,9 +82,7 @@ def template2(request):
 
 def cliente(request):
     
-    # dato = cliente(request)
-    # dato.save()
-    return render(request, 'cliente.html')
+     return render(request, 'cliente.html')
 
 
 
